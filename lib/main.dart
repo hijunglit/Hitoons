@@ -87,7 +87,7 @@ class App extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 100,
+                  height: 50,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -120,26 +120,23 @@ class App extends StatelessWidget {
                   amount: "6 428",
                   icon: Icons.euro_rounded,
                   isInverted: false,
+                  offset: 0,
                 ),
-                Transform.translate(
-                  offset: Offset(0, -20),
-                  child: CurrencyCard(
-                    name: "Bitcoin",
-                    code: "BTC",
-                    amount: "2 456",
-                    icon: Icons.currency_bitcoin_rounded,
-                    isInverted: true,
-                  ),
+                CurrencyCard(
+                  name: "Bitcoin",
+                  code: "BTC",
+                  amount: "2 456",
+                  icon: Icons.currency_bitcoin_rounded,
+                  isInverted: true,
+                  offset: -20,
                 ),
-                Transform.translate(
-                  offset: Offset(0, -40),
-                  child: CurrencyCard(
-                    name: "Dollar",
-                    code: "USD",
-                    amount: "428",
-                    icon: Icons.attach_money_outlined,
-                    isInverted: false,
-                  ),
+                CurrencyCard(
+                  name: "Dollar",
+                  code: "USD",
+                  amount: "428",
+                  icon: Icons.monetization_on_outlined,
+                  isInverted: false,
+                  offset: -40,
                 ),
               ],
             ),
