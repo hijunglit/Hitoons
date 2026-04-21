@@ -65,10 +65,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.network(webtoon.thumb),
-            ),
-            const SizedBox(
-              height: 10,
+              child: Image.network(
+                webtoon.thumb,
+                headers: const {'Referer': 'https://comic.naver.com'},
+              ),
             ),
             Text(
               webtoon.title,
