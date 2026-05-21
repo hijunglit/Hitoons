@@ -8,7 +8,7 @@ class Episode extends StatelessWidget {
   final String webtoonId;
   final WebtoonEpisodeModel episode;
 
-  onButtonTap() async {
+  Future<void> onButtonTap() async {
     await launchUrlString(
       "https://comic.naver.com/webtoon/detail?titleId=$webtoonId&no=${episode.id}",
     );
